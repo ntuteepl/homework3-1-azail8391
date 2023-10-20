@@ -38,22 +38,43 @@
 
 
     else {
+          if (s3>s2){
+            if (s3>d2){
 
-         if (d2>s3){
+                car+=1;
+                     printf("%d",car);}
+                else{
+                       printf("%d",car);
 
-            car+=1;
-            printf("%d",car);
-        }
-        else {
 
-            printf("%d",car);
+                }
 
-        }
 
+
+
+
+            }
+            else {
+                if (d2>s3){
+
+                   car+=1;
+                     printf("%d",car);
+                }
+                else {
+
+                    printf("%d",car);
+
+
+                }
+
+
+            }
 
 
     }
 
 
-}
+
+
+ }
 
