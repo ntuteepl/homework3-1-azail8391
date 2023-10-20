@@ -1,80 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
+ main()
+void printString(char String[], bool TurnLine){
+    for(int i; i < strlen(String); i ++){
+        printf("%c", String[i]);
+    }
+    if(TurnLine) printf("\n");
+}
 
- main() {
- int s1,d1,s2,d2,s3,d3;
-    scanf("%d%d%d%d%d%d", &s1,&d1,&s2,&d2,&s3,&d3);
-    int car=1;
-    if (d1>s2||d1>s3){
-            car+=1;
+{
+    int s1, d1, s2, d2, s3, d3;
+    int count, n_use = 0;
+    scanf("%d%d%d%d%d%d", &s1, &d1,&s2, &d2, &s3, &d3);
 
-        if (d1>s3){
-
-            car+=1;
-            printf("%d",car);
+    for(int i = 1; i < 25 ; i++){
+        if(i == d1 || i == d2 || i == d3){
+            n_use += 1;
         }
-        else {
-
-            printf("%d",car);
-
-        }
-
-
-
-    }
-    else if (d1>s2&&d1>s3) {
-         car+=2;
-
-
-
-
-            printf("%d",car);
-
-
-
-
-    }
-
-
-
-    else {
-          if (s3>s2){
-            if (s3>d2){
-
-                car+=1;
-                     printf("%d",car);}
-                else{
-                       printf("%d",car);
-
-
-                }
-
-
-
-
-
+        if(i == s1 || i == s2 || i == s3){
+            if(n_use == 0){
+                count += 1;
+            }else{
+                n_use -= 1;
+           
             }
-            else {
-                if (d2>s3){
-
-                   car+=1;
-                     printf("%d",car);
-                }
-                else {
-
-                    printf("%d",car);
-
-
-                }
-
-
-            }
-
-
+         }
+   
+    
+    
     }
 
-
-
-
- }
-
+    printf("%d\n", count);
+}
