@@ -5,7 +5,7 @@
 main() {
 
 int getcount(int n){
-    int a, b = 0;
+     int a, b = 0;
     while(n > 0){
         a = n % 10;
         b = b + a;
@@ -14,7 +14,7 @@ int getcount(int n){
     return b;
 }
 
-
+ 
 
     int i1, i2;
     int c1, c2;
